@@ -19,7 +19,7 @@ The implementation differs from the original paper in the following ways :
  
  ## To run the script
  ```bash
-    python nn.py
+    python3 nn.py
  ```
  ## Requirements
     1) numpy 
