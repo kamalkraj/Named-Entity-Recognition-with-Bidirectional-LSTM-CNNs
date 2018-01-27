@@ -10,7 +10,8 @@ The implementation differs from the original paper in the following ways :
   Architecture(BILSTM-CNN with emb + caps)
   
  # Netork Model in paper
- ![alt text](https://raw.githubusercontent.com/kamalkraj/Named-Entity-Recognition-with-Bidirectional-LSTM-CNNs/master/model_on_paper.png) ![alt text] (https://raw.githubusercontent.com/kamalkraj/Named-Entity-Recognition-with-Bidirectional-LSTM-CNNs/master/char_embeddings.png)
+ <img src="https://raw.githubusercontent.com/kamalkraj/Named-Entity-Recognition-with-Bidirectional-LSTM-CNNs/master/model_on_paper.png" width="425"/> <img src="https://raw.githubusercontent.com/kamalkraj/Named-Entity-Recognition-with-Bidirectional-LSTM-CNNs/master/char_embeddings.png" width="425"/> 
+
  
  # Network Model Constructed Using Keras
  ![alt text](https://raw.githubusercontent.com/kamalkraj/Named-Entity-Recognition-with-Bidirectional-LSTM-CNNs/master/model.png)
