@@ -4,7 +4,7 @@
 The implementation differs from the original paper in the following ways :
   1) lexicons are not considered
   2) Bucketing is used to speed up the training
-
+  3) nadam optimizer used instead of SGD
 # Result 
   The model produces a test F1_score of 90.9 % with 70 epochs. The results produced in the paper for the given architecture is 91.14
   Architecture(BILSTM-CNN with emb + caps)
@@ -15,6 +15,15 @@ The implementation differs from the original paper in the following ways :
  
  # Network Model Constructed Using Keras
  ![alt text](https://raw.githubusercontent.com/kamalkraj/Named-Entity-Recognition-with-Bidirectional-LSTM-CNNs/master/model.png)
+ 
+ ## To run the script
+ ```bash
+    python nn.py
+ ```
+ ## Requirements
+    1) numpy 
+    2) Keras
+    3) Tensorflow
  
  
  
