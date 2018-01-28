@@ -6,7 +6,7 @@ The implementation differs from the original paper in the following ways :
   2) Bucketing is used to speed up the training
   3) nadam optimizer used instead of SGD
 # Result 
-  The model produces a test F1_score of 90.9 % with 70 epochs. The results produced in the paper for the given architecture is 91.14
+  The model produces a test F1_score of 90.9 % with ~70 epochs. The results produced in the paper for the given architecture is 91.14
   Architecture(BILSTM-CNN with emb + caps)
 # Dataset
 ###  conll-2003 
