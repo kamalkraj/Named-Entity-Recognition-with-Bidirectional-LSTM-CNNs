@@ -12,7 +12,7 @@ def readfile(filename):
     sentences = []
     sentence = []
     for line in f:
-        if len(line)==0 or line[0]=="-" or line[0]=="\n":
+        if len(line)==0 or line.startswith('-DOCSTART') or line[0]=="\n":
             if len(sentence) > 0:
                 sentences.append(sentence)
                 sentence = []
