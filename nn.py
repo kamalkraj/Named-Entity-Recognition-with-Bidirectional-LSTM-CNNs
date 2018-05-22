@@ -3,7 +3,7 @@ from validation import compute_f1
 from keras.models import Model
 from keras.layers import TimeDistributed,Conv1D,Dense,Embedding,Input,Dropout,LSTM,Bidirectional,MaxPooling1D,Flatten,concatenate
 from prepro import readfile,createBatches,createMatrices,iterate_minibatches,addCharInformatioin,padding
-from keras.utils import plot_model,Progbar
+from keras.utils import Progbar
 from keras.preprocessing.sequence import pad_sequences
 from keras.initializers import RandomUniform
 
@@ -111,7 +111,7 @@ output = TimeDistributed(Dense(len(label2Idx), activation='softmax'))(output)
 model = Model(inputs=[words_input, casing_input,character_input], outputs=[output])
 model.compile(loss='sparse_categorical_crossentropy', optimizer='nadam')
 model.summary()
-plot_model(model, to_file='model.png')
+# plot_model(model, to_file='model.png')
 
 
 for epoch in range(epochs):    
@@ -121,7 +121,7 @@ for epoch in range(epochs):
         labels, tokens, casing,char = batch       
         model.train_on_batch([tokens, casing,char], labels)
         a.update(i)
-        print(' ')
+    print(' ')
 
 #   Performance on dev dataset        
 predLabels, correctLabels = tag_dataset(dev_batch)        
