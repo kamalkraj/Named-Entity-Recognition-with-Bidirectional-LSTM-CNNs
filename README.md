@@ -10,7 +10,7 @@ The implementation differs from the original paper in the following ways :
   Architecture(BILSTM-CNN with emb + caps)
 # Dataset
 ###  conll-2003 
- # Netork Model in paper
+ # Network Model in paper
  <img src="https://raw.githubusercontent.com/kamalkraj/Named-Entity-Recognition-with-Bidirectional-LSTM-CNNs/master/model_on_paper.png"/> <img src="https://raw.githubusercontent.com/kamalkraj/Named-Entity-Recognition-with-Bidirectional-LSTM-CNNs/master/char_embeddings.png"/> 
 
  
