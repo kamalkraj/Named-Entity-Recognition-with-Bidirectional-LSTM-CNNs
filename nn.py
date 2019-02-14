@@ -23,6 +23,7 @@ def tag_dataset(dataset):
         correctLabels.append(labels)
         predLabels.append(pred)
         b.update(i)
+    b.update(i+1)
     return predLabels, correctLabels
 
 
@@ -88,6 +89,8 @@ dev_set = padding(createMatrices(devSentences,word2Idx, label2Idx, case2Idx,char
 test_set = padding(createMatrices(testSentences, word2Idx, label2Idx, case2Idx,char2Idx))
 
 idx2Label = {v: k for k, v in label2Idx.items()}
+np.save("models/idx2Label.npy",idx2Label)
+np.save("models/word2Idx.npy",word2Idx)
 
 train_batch,train_batch_len = createBatches(train_set)
 dev_batch,dev_batch_len = createBatches(dev_set)
@@ -121,7 +124,10 @@ for epoch in range(epochs):
         labels, tokens, casing,char = batch       
         model.train_on_batch([tokens, casing,char], labels)
         a.update(i)
+    a.update(i+1)
     print(' ')
+
+model.save("models/model.h5")
 
 #   Performance on dev dataset        
 predLabels, correctLabels = tag_dataset(dev_batch)        

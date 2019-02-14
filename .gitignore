@@ -46,3 +46,6 @@ Network Trash Folder
 Temporary Items
 .apdisk
 embeddings/glove.6B.100d.txt
+*.npy
+*.h5
+__pycache__/

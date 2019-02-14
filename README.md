@@ -22,10 +22,24 @@ The implementation differs from the original paper in the following ways :
     python3 nn.py
  ```
  ## Requirements
+    0) nltk
     1) numpy 
-    2) Keras
-    3) Tensorflow
+    2) Keras==2.1.2
+    3) Tensorflow==1.4.1
  
+
+## Inference on trained model
+
+```python
+from ner import Parser
+
+p = Parser()
+
+p.load_models("models/")
+
+p.predict("Steve Went to Paris")
+##Output [('Steve', 'B-PER'), ('went', 'O'), ('to', 'O'), ('Paris', 'B-LOC')]
+```
  
  
  
