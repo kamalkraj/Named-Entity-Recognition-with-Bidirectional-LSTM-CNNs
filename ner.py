@@ -20,9 +20,11 @@ class Parser:
             loc = os.path.join(os.path.expanduser('~'), '.ner_model')
         self.model = load_model(os.path.join(loc,"model.h5"))
         # loading word2Idx
+        np.load.__defaults__=(None, True, True, 'ASCII')
         self.word2Idx = np.load(os.path.join(loc,"word2Idx.npy")).item()
         # loading idx2Label
         self.idx2Label = np.load(os.path.join(loc,"idx2Label.npy")).item()
+        np.load.__defaults__=(None, False, True, 'ASCII')
 
     def getCasing(self,word, caseLookup):   
         casing = 'other'
